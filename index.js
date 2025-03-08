@@ -4,6 +4,7 @@ const client = new Client({
     GatewayIntentBits.Guilds,
     GatewayIntentBits.GuildMessages,
     GatewayIntentBits.GuildMessageReactions,
+    GatewayIntentBits.GuildMembers,
     GatewayIntentBits.MessageContent,
   ],
 });
@@ -16,7 +17,7 @@ client.commands = new Collection();
 
 const slashCommandsPath = path.join(__dirname, 'commands');
 const slashCommandFolders = fs.readdirSync(slashCommandsPath);
-
+  
 console.log('[INFO] Cargando comandos slash...');
 for (const folder of slashCommandFolders) {
   const commandsPath = path.join(slashCommandsPath, folder);

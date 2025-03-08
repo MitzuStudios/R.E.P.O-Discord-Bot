@@ -68,7 +68,7 @@ module.exports = {
 
       await interaction.reply({ embeds: [banEmbed], flags: MessageFlags.Ephemeral });
 
-      const logChannel = interaction.guild.channels.cache.get('1291970241622179871');
+      const logChannel = interaction.guild.channels.cache.get('1347641267642957855');
       if (logChannel) {
         const logEmbed = new EmbedBuilder()
           .setTitle('🔨 Usuario baneado')
